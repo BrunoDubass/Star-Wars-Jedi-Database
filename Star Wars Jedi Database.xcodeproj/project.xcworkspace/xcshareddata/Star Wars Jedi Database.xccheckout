@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F48548B4-6212-4BBB-B531-82A755CBD97F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Star Wars Jedi Database</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>986CD1ECE11727516513EA830D8DD0F34F50EA1D</key>
+		<string>https://github.com/BrunoDubass/Star-Wars-Jedi-Database.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Star Wars Jedi Database.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>986CD1ECE11727516513EA830D8DD0F34F50EA1D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/BrunoDubass/Star-Wars-Jedi-Database.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>986CD1ECE11727516513EA830D8DD0F34F50EA1D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>986CD1ECE11727516513EA830D8DD0F34F50EA1D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Star%20Wars%20Jedi%20Database</string>
+		</dict>
+	</array>
+</dict>
+</plist>
