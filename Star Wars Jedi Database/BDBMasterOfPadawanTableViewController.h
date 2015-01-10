@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BDBMasterOfPadawanTableViewController : UITableViewController
+@class BDBJedi;
+
+@protocol BDBMasterOfPadawanTableViewControlerDelegate <NSObject>
+
+@optional
+-(void)masterOfPadawan:(BDBJedi*)master;
 
 @end
+
+
+@interface BDBMasterOfPadawanTableViewController : UITableViewController
+
+@property (strong, nonatomic) id<BDBMasterOfPadawanTableViewControlerDelegate> delegate;
+
+-(id)initWithModelKnight:(NSArray*)aKnight Master:(NSArray*)aMaster Grand:(NSArray*)aGrand;
+
+@end
+

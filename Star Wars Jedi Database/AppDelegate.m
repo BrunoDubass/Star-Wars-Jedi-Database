@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "BDBKnightViewController.h"
+#import "BDBJediTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    BDBKnightViewController* knightVC = [[BDBKnightViewController alloc]init];
+    
+    knightVC.title = @"CREATE JEDI";
+    BDBJediTableViewController* jediTableVC = [[BDBJediTableViewController alloc]initWithStyle:UITableViewStyleGrouped];
+    jediTableVC.title = @"JEDI TABLE";
+    knightVC.delegate = jediTableVC;
+    
+    UINavigationController* navVC = [[UINavigationController alloc]initWithRootViewController:knightVC];
+    UINavigationController* navVC2 = [[UINavigationController alloc]initWithRootViewController:jediTableVC];
+    UITabBarController* tabBarVC = [[UITabBarController alloc]init];
+    tabBarVC.viewControllers = @[navVC, navVC2];
     // Override point for customization after application launch.
+    
+    [[UINavigationBar appearance]setBarTintColor:[UIColor blueColor]];
+    [[UINavigationBar appearance]setTintColor:[UIColor yellowColor]];
+    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    self.window.rootViewController = tabBarVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

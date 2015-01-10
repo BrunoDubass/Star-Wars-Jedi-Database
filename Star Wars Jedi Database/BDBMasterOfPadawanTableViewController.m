@@ -7,12 +7,30 @@
 //
 
 #import "BDBMasterOfPadawanTableViewController.h"
+#import "BDBJedi.h"
+#import "BDBLightSaber.h"
 
 @interface BDBMasterOfPadawanTableViewController ()
+
+
+@property (strong, nonatomic) NSArray* knightTable;
+@property (strong, nonatomic) NSArray* masterTable;
+@property (strong, nonatomic) NSArray* grandMasterTable;
+@property (strong, nonatomic) BDBJedi* masterOfPadawan;
 
 @end
 
 @implementation BDBMasterOfPadawanTableViewController
+
+-(id)initWithModelKnight:(NSArray*)aKnight Master:(NSArray*)aMaster Grand:(NSArray*)aGrand{
+    if (self = [super initWithStyle:UITableViewStyleGrouped]) {
+        _knightTable = [[NSArray alloc]initWithArray:aKnight];
+        _masterTable = [[NSArray alloc]initWithArray:aMaster];
+        _grandMasterTable = [[NSArray alloc]initWithArray:aGrand];
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,27 +49,76 @@
 
 #pragma mark - Table view data source
 
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+
+    if (section == 0) {
+        return [self.knightTable count];
+    }else if (section == 1){
+        return [self.masterTable count];
+    }else{
+        return [self.grandMasterTable count];
+    }
 }
 
-/*
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return @"Jedi Knights";
+    }else if (section == 1){
+        return @"Jedi Masters";
+    }else{
+        return @"Jedi Grand Masters";
+    }
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString* cellIdentifier = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
+                                     reuseIdentifier:cellIdentifier];
+    }
     
     // Configure the cell...
+
+    if (indexPath.section == 0) {
+        cell.textLabel.text = [[self.knightTable objectAtIndex:indexPath.row]name];
+        cell.imageView.image = [UIImage imageNamed:@"light saber table"];
+        cell.imageView.backgroundColor = [[[self.knightTable objectAtIndex:indexPath.row]lightSaber]color];
+        //cell.imageView.backgroundColor = [[[self.knightTable objectAtIndex:indexPath.row]lightSaber]color];
+    }else if (indexPath.section == 1){
+        cell.textLabel.text = [[self.masterTable objectAtIndex:indexPath.row]name];
+        cell.imageView.image = [UIImage imageNamed:@"light saber table"];
+        cell.imageView.backgroundColor = [[[self.masterTable objectAtIndex:indexPath.row]lightSaber]color];
+        //cell.imageView.backgroundColor = [[[self.masterTable objectAtIndex:indexPath.row]lightSaber ]color];
+    }else{
+        cell.textLabel.text = [[self.grandMasterTable objectAtIndex:indexPath.row]name];
+        cell.imageView.image = [UIImage imageNamed:@"light saber table"];
+        cell.imageView.backgroundColor = [[[self.grandMasterTable objectAtIndex:indexPath.row]lightSaber]color];
+        
+    }
     
     return cell;
 }
-*/
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 0){
+        [self.delegate masterOfPadawan:[self.knightTable objectAtIndex:indexPath.row]];
+    }else if (indexPath.section == 1){
+        [self.delegate masterOfPadawan:[self.masterTable objectAtIndex:indexPath.row]];
+    }else{
+        [self.delegate masterOfPadawan:[self.grandMasterTable objectAtIndex:indexPath.row]];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.

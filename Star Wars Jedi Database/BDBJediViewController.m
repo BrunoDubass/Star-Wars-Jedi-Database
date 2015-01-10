@@ -14,6 +14,16 @@
 
 @implementation BDBJediViewController
 
+-(id)init{
+    
+    if (self = [super init]) {
+        _knight = [[NSMutableArray alloc]init];
+        _master = [[NSMutableArray alloc]init];
+        _grandMaster = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

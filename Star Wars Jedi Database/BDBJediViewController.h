@@ -10,4 +10,8 @@
 
 @interface BDBJediViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableArray* knight;
+@property (strong, nonatomic) NSMutableArray* master;
+@property (strong, nonatomic) NSMutableArray* grandMaster;
+
 @end

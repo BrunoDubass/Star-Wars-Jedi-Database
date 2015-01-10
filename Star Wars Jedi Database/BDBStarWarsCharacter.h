@@ -10,4 +10,16 @@
 
 @interface BDBStarWarsCharacter : NSObject
 
+#pragma mark - PROPERTIES
+
+@property (copy, nonatomic) NSString* name;
+
+#pragma mark - CLASS CONSTRUCTORS
+
++(id)starWarsCharaterWithName:(NSString*)aName;
+
+#pragma mark - INITS
+
+-(id)initWithName:(NSString*)aName;
+
 @end

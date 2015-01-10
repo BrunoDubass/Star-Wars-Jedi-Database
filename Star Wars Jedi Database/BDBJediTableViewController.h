@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BDBKnightViewController.h"
 
-@interface BDBJediTableViewController : UITableViewController
+
+@interface BDBJediTableViewController : UITableViewController <BDBKnightViewControllerDelegate>
+
+-(id)initWithModelKnight:(NSArray*)aKnight Master:(NSArray*)aMaster Grand:(NSArray*)aGrand;
 
 @end
