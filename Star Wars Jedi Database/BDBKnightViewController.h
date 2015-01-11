@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *padawanOfField;
 
 @property (strong, nonatomic) id<BDBKnightViewControllerDelegate>delegate;
+@property (weak, nonatomic) IBOutlet UIImageView *imageBackgroundField;
+@property (strong, nonatomic) UIImage* imageBackground;
 
 - (IBAction)midiChloriansAction:(id)sender;
 - (IBAction)sliderAction:(id)sender;
@@ -38,6 +40,6 @@
 
 - (IBAction)createJedi:(id)sender;
 
--(void)kindOfJediFunc;
+- (void)kindOfJediFunc;
 
 @end

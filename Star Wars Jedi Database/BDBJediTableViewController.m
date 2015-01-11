@@ -34,6 +34,15 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    NSLog(@"WILL TABLE KNIGHTS");
+    NSLog(@"%@", self.knightTable);
+    NSLog(@"WILL TABLE MASTERS");
+    NSLog(@"%@", self.masterTable);
+    NSLog(@"WILL TABLE GRAND MASTERS");
+    NSLog(@"%@", self.grandMasterTable);
+    
+
+    
     }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -99,13 +108,13 @@
         cell.detailTextLabel.text = [[self.knightTable objectAtIndex:indexPath.row]jediRange];
         cell.imageView.image = [UIImage imageNamed:@"light saber table"];
         cell.imageView.backgroundColor = [[[self.knightTable objectAtIndex:indexPath.row]lightSaber]color];
-        //cell.imageView.backgroundColor = [[[self.knightTable objectAtIndex:indexPath.row]lightSaber]color];
+        
     }else if (indexPath.section == 1){
         cell.textLabel.text = [[self.masterTable objectAtIndex:indexPath.row]name];
         cell.detailTextLabel.text = [[self.masterTable objectAtIndex:indexPath.row]jediRange];
         cell.imageView.image = [UIImage imageNamed:@"light saber table"];
         cell.imageView.backgroundColor = [[[self.masterTable objectAtIndex:indexPath.row]lightSaber]color];
-        //cell.imageView.backgroundColor = [[[self.masterTable objectAtIndex:indexPath.row]lightSaber ]color];
+        
     }else{
         cell.textLabel.text = [[self.grandMasterTable objectAtIndex:indexPath.row]name];
         cell.detailTextLabel.text = [[self.grandMasterTable objectAtIndex:indexPath.row]jediRange];

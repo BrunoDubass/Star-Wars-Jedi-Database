@@ -21,8 +21,11 @@
 		141A0B761A5F5CA300D44372 /* light saber png.png in Resources */ = {isa = PBXBuildFile; fileRef = 141A0B751A5F5CA300D44372 /* light saber png.png */; };
 		141DB4E41A5F8012001BA782 /* light saber horizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 141DB4E31A5F8012001BA782 /* light saber horizontal.png */; };
 		141DB4E71A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141DB4E61A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.m */; };
+		14DE93921A62C78A00372E2C /* darth.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DE93911A62C78A00372E2C /* darth.png */; };
+		14DE93981A62CE8F00372E2C /* jedi table.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DE93971A62CE8F00372E2C /* jedi table.png */; };
+		14DE939A1A62D7F800372E2C /* light saber table.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DE93991A62D7F800372E2C /* light saber table.png */; };
+		14DE939C1A630D5B00372E2C /* darth 30.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DE939B1A630D5B00372E2C /* darth 30.png */; };
 		14FC16FB1A60FC5700EEA926 /* BDBJediTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC16FA1A60FC5700EEA926 /* BDBJediTableViewController.m */; };
-		14FC16FF1A6134F200EEA926 /* light saber table.png in Resources */ = {isa = PBXBuildFile; fileRef = 14FC16FE1A6134F200EEA926 /* light saber table.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +64,12 @@
 		141DB4E31A5F8012001BA782 /* light saber horizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light saber horizontal.png"; sourceTree = "<group>"; };
 		141DB4E51A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBMasterOfPadawanTableViewController.h; sourceTree = "<group>"; };
 		141DB4E61A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBMasterOfPadawanTableViewController.m; sourceTree = "<group>"; };
+		14DE93911A62C78A00372E2C /* darth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darth.png; sourceTree = "<group>"; };
+		14DE93971A62CE8F00372E2C /* jedi table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jedi table.png"; sourceTree = "<group>"; };
+		14DE93991A62D7F800372E2C /* light saber table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light saber table.png"; sourceTree = "<group>"; };
+		14DE939B1A630D5B00372E2C /* darth 30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "darth 30.png"; sourceTree = "<group>"; };
 		14FC16F91A60FC5700EEA926 /* BDBJediTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBJediTableViewController.h; sourceTree = "<group>"; };
 		14FC16FA1A60FC5700EEA926 /* BDBJediTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBJediTableViewController.m; sourceTree = "<group>"; };
-		14FC16FE1A6134F200EEA926 /* light saber table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light saber table.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,10 @@
 		141A0B361A5E4E2000D44372 /* Star Wars Jedi Database */ = {
 			isa = PBXGroup;
 			children = (
-				14FC16FE1A6134F200EEA926 /* light saber table.png */,
+				14DE939B1A630D5B00372E2C /* darth 30.png */,
+				14DE93991A62D7F800372E2C /* light saber table.png */,
+				14DE93971A62CE8F00372E2C /* jedi table.png */,
+				14DE93911A62C78A00372E2C /* darth.png */,
 				141DB4E31A5F8012001BA782 /* light saber horizontal.png */,
 				141A0B751A5F5CA300D44372 /* light saber png.png */,
 				141A0B3B1A5E4E2000D44372 /* AppDelegate.h */,
@@ -264,10 +273,13 @@
 			files = (
 				141A0B691A5E571500D44372 /* BDBKnightViewController.xib in Resources */,
 				141A0B421A5E4E2000D44372 /* LaunchScreen.xib in Resources */,
+				14DE939A1A62D7F800372E2C /* light saber table.png in Resources */,
+				14DE93981A62CE8F00372E2C /* jedi table.png in Resources */,
 				141A0B3F1A5E4E2000D44372 /* Images.xcassets in Resources */,
 				141A0B761A5F5CA300D44372 /* light saber png.png in Resources */,
 				141DB4E41A5F8012001BA782 /* light saber horizontal.png in Resources */,
-				14FC16FF1A6134F200EEA926 /* light saber table.png in Resources */,
+				14DE939C1A630D5B00372E2C /* darth 30.png in Resources */,
+				14DE93921A62C78A00372E2C /* darth.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

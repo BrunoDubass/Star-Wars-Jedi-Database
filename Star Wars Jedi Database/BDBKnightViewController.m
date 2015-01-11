@@ -37,6 +37,9 @@
         _grandMasterArray = [[NSMutableArray alloc]init];
         
         _midiChloriansSlider.value = 100;
+        
+        
+        
     }
     return self;
 }
@@ -49,7 +52,11 @@
     self.pickerArray = @[@"None", @"Red", @"Green", @"Blue", @"Purple"];
     self.image = [UIImage imageNamed:@"light saber horizontal"];
     self.imageField.image = self.image;
+    self.imageBackground = [UIImage imageNamed:@"darth"];
+    self.imageBackgroundField.image = self.imageBackground;
     [self.view addSubview:self.imageField];
+    [self.view addSubview:self.imageBackgroundField];
+    
     
 }
 
@@ -188,50 +195,135 @@
         self.jedi.padawanOf = self.padawanOf;
         
         
-        NSLog(@"%@", self.jedi.lightSaber.color);
+        
+        
 
         if (self.jedi.midichlorians<1000) {
-            [self.knightArray addObject:self.jedi];
             
+            if ([self jediInKnightArray]) {
+                [self jediExists];
+            }else{
+                [self.knightArray addObject:self.jedi];
+                [self resetAndCreateJedi];
+                [self sendToDelegate];
+
+            }
         }else if (self.jedi.midichlorians<10000) {
-            [self.masterArray addObject:self.jedi];
+            
+            if ([self jediInMasterArray]) {
+                [self jediExists];
+            
+            }else{
+                [self.masterArray addObject:self.jedi];
+                [self resetAndCreateJedi];
+                [self sendToDelegate];
+                
+                
+            }
+
             
         }else{
-            [self.grandMasterArray addObject:self.jedi];
+            
+            if ([self jediInGrandMasterArray]) {
+                [self jediExists];
+            }else{
+                [self.grandMasterArray addObject:self.jedi];
+                [self resetAndCreateJedi];
+                [self sendToDelegate];
+                }
+                
+            }
+
         }
         
-        self.nameField.text = @"";
-        self.midiChloriansSlider.value = 100;
-        self.midiChloriansField.text = @"";
-        self.padawanOfField.text = @"";
-        [self.lighSaberPicker selectRow:0 inComponent:0 animated:YES];
-        self.imageField.backgroundColor = nil;
-        self.kindOfJedi.text = @"";
         
-        [self.delegate arraysTableWithKnights:self.knightArray
-                                      Masters:self.masterArray
-                                 GrandMasters:self.grandMasterArray];
-        
-        
-        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Jedi Knight Created"
-                                                       message:nil
-                                                      delegate:self
-                                             cancelButtonTitle:@"Ok"
-                                             otherButtonTitles: nil];
-        
-        [alert show];
+    
+    
+    
+    NSLog(@"KNIGHTS");
+    NSLog(@"%@", self.knightArray);
+    NSLog(@"MASTERS");
+    NSLog(@"%@", self.masterArray);
+    NSLog(@"GRAND MASTERS");
+    NSLog(@"%@", self.grandMasterArray);
 
-    }
-    
-    
-//    NSLog(@"KNIGHTS");
-//    NSLog(@"%@", self.knightArray);
-//    NSLog(@"MASTERS");
-//    NSLog(@"%@", self.masterArray);
-//    NSLog(@"GRAND MASTERS");
-//    NSLog(@"%@", self.grandMasterArray);
-//    NSLog(@"%lui", (unsigned long)[self.grandMasterArray count]);
 }
+
+-(void)sendToDelegate{
+    [self.delegate arraysTableWithKnights:self.knightArray
+                                  Masters:self.masterArray
+                             GrandMasters:self.grandMasterArray];
+}
+
+-(BOOL)jediInKnightArray{
+    for (int i = 0; i<self.knightArray.count; i++) {
+        if ([self.jedi.name isEqualToString:[[self.knightArray objectAtIndex:i]name] ] && self.jedi.midichlorians == [[self.knightArray objectAtIndex:i]midichlorians]) {
+            return YES;
+        }
+        
+    }
+    return NO;
+}
+
+-(BOOL)jediInMasterArray{
+    for (int i = 0; i<self.masterArray.count; i++) {
+        if ([self.jedi.name isEqualToString:[[self.masterArray objectAtIndex:i]name] ] && self.jedi.midichlorians == [[self.masterArray objectAtIndex:i]midichlorians]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+-(BOOL)jediInGrandMasterArray{
+    for (int i = 0; i<self.grandMasterArray.count; i++) {
+        if ([self.jedi.name isEqualToString:[[self.grandMasterArray objectAtIndex:i]name] ] && self.jedi.midichlorians == [[self.grandMasterArray objectAtIndex:i]midichlorians]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
+
+-(void)jediExists{
+    [self reset];
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:[NSString stringWithFormat: @"Jedi Knight %@ Exists", self.jedi.name]
+                                                   message:nil
+                                                  delegate:self
+                                         cancelButtonTitle:@"Ok"
+                                         otherButtonTitles: nil];
+    
+    [alert show];
+
+}
+
+-(void)reset{
+    self.nameField.text = @"";
+    self.midiChloriansSlider.value = 100;
+    self.midiChloriansField.text = @"";
+    self.padawanOfField.text = @"";
+    [self.lighSaberPicker selectRow:0 inComponent:0 animated:YES];
+    self.imageField.backgroundColor = nil;
+    self.kindOfJedi.text = @"";
+}
+
+-(void)resetAndCreateJedi{
+    
+    
+    
+    
+    [self reset];
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Jedi Knight Created"
+                                                   message:nil
+                                                  delegate:self
+                                         cancelButtonTitle:@"Ok"
+                                         otherButtonTitles: nil];
+    
+    [alert show];
+
+}
+
+
 
 
 

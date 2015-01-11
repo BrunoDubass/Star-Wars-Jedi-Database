@@ -28,6 +28,9 @@
     
     UINavigationController* navVC = [[UINavigationController alloc]initWithRootViewController:knightVC];
     UINavigationController* navVC2 = [[UINavigationController alloc]initWithRootViewController:jediTableVC];
+    
+    navVC.tabBarItem.image = [UIImage imageNamed:@"darth 30"];
+    navVC2.tabBarItem.image = [UIImage imageNamed:@"jedi table"];
     UITabBarController* tabBarVC = [[UITabBarController alloc]init];
     tabBarVC.viewControllers = @[navVC, navVC2];
     // Override point for customization after application launch.
