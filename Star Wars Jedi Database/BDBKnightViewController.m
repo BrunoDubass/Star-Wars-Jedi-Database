@@ -10,8 +10,11 @@
 #import "BDBJedi.h"
 #import "BDBLightSaber.h"
 #import "BDBMasterOfPadawanTableViewController.h"
+#import "BDBJediTableViewController.h"
 
 @interface BDBKnightViewController ()
+
+#pragma mark - PROPERTIES
 
 @property (strong, nonatomic) NSArray* pickerArray;
 @property (copy, nonatomic) NSString* selected;
@@ -138,6 +141,13 @@
 
 #pragma mark - UTILS
 
+- (IBAction)jediTable:(id)sender {
+    BDBJediTableViewController* jediVC = [[BDBJediTableViewController alloc]initWithModelKnight:self.knightArray Master:self.masterArray Grand:self.grandMasterArray];
+    jediVC.title = @"Jedi Table";
+    [self.navigationController pushViewController:jediVC animated:YES];
+    
+}
+
 - (IBAction)midiChloriansAction:(id)sender{
     self.midiChloriansSlider.value = [self.midiChloriansField.text integerValue];
     [self kindOfJediFunc];
@@ -204,8 +214,8 @@
                 [self jediExists];
             }else{
                 [self.knightArray addObject:self.jedi];
-                [self resetAndCreateJedi];
                 [self sendToDelegate];
+                [self resetAndCreateJedi];
 
             }
         }else if (self.jedi.midichlorians<10000) {
@@ -215,10 +225,9 @@
             
             }else{
                 [self.masterArray addObject:self.jedi];
-                [self resetAndCreateJedi];
                 [self sendToDelegate];
-                
-                
+                [self resetAndCreateJedi];
+              
             }
 
             
@@ -228,12 +237,12 @@
                 [self jediExists];
             }else{
                 [self.grandMasterArray addObject:self.jedi];
-                [self resetAndCreateJedi];
                 [self sendToDelegate];
+                [self resetAndCreateJedi];
                 }
                 
             }
-
+            
         }
         
         

@@ -19,25 +19,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    BDBKnightViewController* knightVC = [[BDBKnightViewController alloc]init];
     
-    knightVC.title = @"CREATE JEDI";
-    BDBJediTableViewController* jediTableVC = [[BDBJediTableViewController alloc]initWithStyle:UITableViewStyleGrouped];
-    jediTableVC.title = @"JEDI TABLE";
-    knightVC.delegate = jediTableVC;
+    //CONTROLLERS
+    
+    BDBKnightViewController* knightVC = [[BDBKnightViewController alloc]init];
+    knightVC.title = @"Create Jedi";
+    
+//    BDBJediTableViewController* jediTableVC = [[BDBJediTableViewController alloc]initWithStyle:UITableViewStyleGrouped];
+//    jediTableVC.title = @"JEDI TABLE";
+    
+    //DELEGATES
+    
+    //knightVC.delegate = jediTableVC;
+    
+    //COMBINATORS
     
     UINavigationController* navVC = [[UINavigationController alloc]initWithRootViewController:knightVC];
-    UINavigationController* navVC2 = [[UINavigationController alloc]initWithRootViewController:jediTableVC];
     
     navVC.tabBarItem.image = [UIImage imageNamed:@"darth 30"];
-    navVC2.tabBarItem.image = [UIImage imageNamed:@"jedi table"];
+    //jediTableVC.tabBarItem.image = [UIImage imageNamed:@"jedi table"];
+    
     UITabBarController* tabBarVC = [[UITabBarController alloc]init];
-    tabBarVC.viewControllers = @[navVC, navVC2];
-    // Override point for customization after application launch.
+    tabBarVC.viewControllers = @[navVC];
+    
+    //CUSTOM APPEARANCE
     
     [[UINavigationBar appearance]setBarTintColor:[UIColor blueColor]];
     [[UINavigationBar appearance]setTintColor:[UIColor yellowColor]];
     [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    //ROOT VIEW CONTROLLER
     
     self.window.rootViewController = tabBarVC;
     self.window.backgroundColor = [UIColor whiteColor];

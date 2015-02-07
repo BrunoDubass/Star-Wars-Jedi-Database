@@ -15,17 +15,17 @@
 		141A0B591A5E4E7800D44372 /* BDBStarWarsCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 141A0B581A5E4E7800D44372 /* BDBStarWarsCharacter.m */; };
 		141A0B5C1A5E4E8E00D44372 /* BDBJedi.m in Sources */ = {isa = PBXBuildFile; fileRef = 141A0B5B1A5E4E8E00D44372 /* BDBJedi.m */; };
 		141A0B5F1A5E4EA500D44372 /* BDBLightSaber.m in Sources */ = {isa = PBXBuildFile; fileRef = 141A0B5E1A5E4EA500D44372 /* BDBLightSaber.m */; };
-		141A0B631A5E560500D44372 /* BDBJediViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141A0B621A5E560500D44372 /* BDBJediViewController.m */; };
 		141A0B681A5E571500D44372 /* BDBKnightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141A0B661A5E571500D44372 /* BDBKnightViewController.m */; };
 		141A0B691A5E571500D44372 /* BDBKnightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141A0B671A5E571500D44372 /* BDBKnightViewController.xib */; };
 		141A0B761A5F5CA300D44372 /* light saber png.png in Resources */ = {isa = PBXBuildFile; fileRef = 141A0B751A5F5CA300D44372 /* light saber png.png */; };
 		141DB4E41A5F8012001BA782 /* light saber horizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 141DB4E31A5F8012001BA782 /* light saber horizontal.png */; };
 		141DB4E71A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141DB4E61A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.m */; };
+		1460DFE61A65ED8F00A4B750 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1460DFE51A65ED8F00A4B750 /* Entitlements.plist */; };
+		14B14C0C1A642E0400E88CC3 /* BDBJediTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B14C0B1A642E0400E88CC3 /* BDBJediTableViewController.m */; };
 		14DE93921A62C78A00372E2C /* darth.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DE93911A62C78A00372E2C /* darth.png */; };
 		14DE93981A62CE8F00372E2C /* jedi table.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DE93971A62CE8F00372E2C /* jedi table.png */; };
 		14DE939A1A62D7F800372E2C /* light saber table.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DE93991A62D7F800372E2C /* light saber table.png */; };
 		14DE939C1A630D5B00372E2C /* darth 30.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DE939B1A630D5B00372E2C /* darth 30.png */; };
-		14FC16FB1A60FC5700EEA926 /* BDBJediTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC16FA1A60FC5700EEA926 /* BDBJediTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,6 @@
 		141A0B5B1A5E4E8E00D44372 /* BDBJedi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBJedi.m; sourceTree = "<group>"; };
 		141A0B5D1A5E4EA500D44372 /* BDBLightSaber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBLightSaber.h; sourceTree = "<group>"; };
 		141A0B5E1A5E4EA500D44372 /* BDBLightSaber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBLightSaber.m; sourceTree = "<group>"; };
-		141A0B611A5E560500D44372 /* BDBJediViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBJediViewController.h; sourceTree = "<group>"; };
-		141A0B621A5E560500D44372 /* BDBJediViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBJediViewController.m; sourceTree = "<group>"; };
 		141A0B651A5E571500D44372 /* BDBKnightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBKnightViewController.h; sourceTree = "<group>"; };
 		141A0B661A5E571500D44372 /* BDBKnightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBKnightViewController.m; sourceTree = "<group>"; };
 		141A0B671A5E571500D44372 /* BDBKnightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDBKnightViewController.xib; sourceTree = "<group>"; };
@@ -64,12 +62,13 @@
 		141DB4E31A5F8012001BA782 /* light saber horizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light saber horizontal.png"; sourceTree = "<group>"; };
 		141DB4E51A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBMasterOfPadawanTableViewController.h; sourceTree = "<group>"; };
 		141DB4E61A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBMasterOfPadawanTableViewController.m; sourceTree = "<group>"; };
+		1460DFE51A65ED8F00A4B750 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		14B14C0A1A642E0400E88CC3 /* BDBJediTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBJediTableViewController.h; sourceTree = "<group>"; };
+		14B14C0B1A642E0400E88CC3 /* BDBJediTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBJediTableViewController.m; sourceTree = "<group>"; };
 		14DE93911A62C78A00372E2C /* darth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darth.png; sourceTree = "<group>"; };
 		14DE93971A62CE8F00372E2C /* jedi table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jedi table.png"; sourceTree = "<group>"; };
 		14DE93991A62D7F800372E2C /* light saber table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light saber table.png"; sourceTree = "<group>"; };
 		14DE939B1A630D5B00372E2C /* darth 30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "darth 30.png"; sourceTree = "<group>"; };
-		14FC16F91A60FC5700EEA926 /* BDBJediTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBJediTableViewController.h; sourceTree = "<group>"; };
-		14FC16FA1A60FC5700EEA926 /* BDBJediTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBJediTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +92,7 @@
 		141A0B2B1A5E4E2000D44372 = {
 			isa = PBXGroup;
 			children = (
+				1460DFE51A65ED8F00A4B750 /* Entitlements.plist */,
 				141A0B361A5E4E2000D44372 /* Star Wars Jedi Database */,
 				141A0B4A1A5E4E2000D44372 /* Star Wars Jedi DatabaseTests */,
 				141A0B351A5E4E2000D44372 /* Products */,
@@ -170,8 +170,6 @@
 		141A0B641A5E561100D44372 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				141A0B611A5E560500D44372 /* BDBJediViewController.h */,
-				141A0B621A5E560500D44372 /* BDBJediViewController.m */,
 				141A0B6A1A5E577E00D44372 /* Jedi Controllers */,
 			);
 			name = Controllers;
@@ -180,8 +178,8 @@
 		141A0B6A1A5E577E00D44372 /* Jedi Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				14FC16F91A60FC5700EEA926 /* BDBJediTableViewController.h */,
-				14FC16FA1A60FC5700EEA926 /* BDBJediTableViewController.m */,
+				14B14C0A1A642E0400E88CC3 /* BDBJediTableViewController.h */,
+				14B14C0B1A642E0400E88CC3 /* BDBJediTableViewController.m */,
 				141DB4E51A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.h */,
 				141DB4E61A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.m */,
 				141A0B651A5E571500D44372 /* BDBKnightViewController.h */,
@@ -279,6 +277,7 @@
 				141A0B761A5F5CA300D44372 /* light saber png.png in Resources */,
 				141DB4E41A5F8012001BA782 /* light saber horizontal.png in Resources */,
 				14DE939C1A630D5B00372E2C /* darth 30.png in Resources */,
+				1460DFE61A65ED8F00A4B750 /* Entitlements.plist in Resources */,
 				14DE93921A62C78A00372E2C /* darth.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,14 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				141DB4E71A5FB0A7001BA782 /* BDBMasterOfPadawanTableViewController.m in Sources */,
-				14FC16FB1A60FC5700EEA926 /* BDBJediTableViewController.m in Sources */,
 				141A0B5C1A5E4E8E00D44372 /* BDBJedi.m in Sources */,
+				14B14C0C1A642E0400E88CC3 /* BDBJediTableViewController.m in Sources */,
 				141A0B3D1A5E4E2000D44372 /* AppDelegate.m in Sources */,
 				141A0B5F1A5E4EA500D44372 /* BDBLightSaber.m in Sources */,
 				141A0B681A5E571500D44372 /* BDBKnightViewController.m in Sources */,
 				141A0B591A5E4E7800D44372 /* BDBStarWarsCharacter.m in Sources */,
 				141A0B3A1A5E4E2000D44372 /* main.m in Sources */,
-				141A0B631A5E560500D44372 /* BDBJediViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +354,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -373,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -397,7 +398,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -408,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

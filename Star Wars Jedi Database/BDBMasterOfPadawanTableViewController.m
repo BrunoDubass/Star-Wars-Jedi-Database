@@ -22,6 +22,8 @@
 
 @implementation BDBMasterOfPadawanTableViewController
 
+#pragma mark - INITS
+
 -(id)initWithModelKnight:(NSArray*)aKnight Master:(NSArray*)aMaster Grand:(NSArray*)aGrand{
     if (self = [super initWithStyle:UITableViewStyleGrouped]) {
         _knightTable = [[NSArray alloc]initWithArray:aKnight];
@@ -32,15 +34,12 @@
     return self;
 }
 
+#pragma mark - CYCLE LIFE
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    NSLog(@"WILL MASTER KNIGHTS");
-    NSLog(@"%@", self.knightTable);
-    NSLog(@"WILL MASTER MASTERS");
-    NSLog(@"%@", self.masterTable);
-    NSLog(@"WILL MASTER GRAND MASTERS");
-    NSLog(@"%@", self.grandMasterTable);
+    
 }
 
 - (void)viewDidLoad {
@@ -101,17 +100,17 @@
     // Configure the cell...
 
     if (indexPath.section == 0) {
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ [MID: %d]", [[self.knightTable objectAtIndex:indexPath.row]name], [[self.knightTable objectAtIndex:indexPath.row]midichlorians]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ [MID: %lu]", [[self.knightTable objectAtIndex:indexPath.row]name], (unsigned long)[[self.knightTable objectAtIndex:indexPath.row]midichlorians]];
         cell.imageView.image = [UIImage imageNamed:@"light saber table"];
         cell.imageView.backgroundColor = [[[self.knightTable objectAtIndex:indexPath.row]lightSaber]color];
         //cell.imageView.backgroundColor = [[[self.knightTable objectAtIndex:indexPath.row]lightSaber]color];
     }else if (indexPath.section == 1){
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ [MID: %d]", [[self.masterTable objectAtIndex:indexPath.row]name], [[self.masterTable objectAtIndex:indexPath.row]midichlorians]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ [MID: %lu]", [[self.masterTable objectAtIndex:indexPath.row]name], (unsigned long)[[self.masterTable objectAtIndex:indexPath.row]midichlorians]];
         cell.imageView.image = [UIImage imageNamed:@"light saber table"];
         cell.imageView.backgroundColor = [[[self.masterTable objectAtIndex:indexPath.row]lightSaber]color];
         //cell.imageView.backgroundColor = [[[self.masterTable objectAtIndex:indexPath.row]lightSaber ]color];
     }else{
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ [MID: %d]", [[self.grandMasterTable objectAtIndex:indexPath.row]name], [[self.grandMasterTable objectAtIndex:indexPath.row]midichlorians]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ [MID: %lu]", [[self.grandMasterTable objectAtIndex:indexPath.row]name], (unsigned long)[[self.grandMasterTable objectAtIndex:indexPath.row]midichlorians]];
         cell.imageView.image = [UIImage imageNamed:@"light saber table"];
         cell.imageView.backgroundColor = [[[self.grandMasterTable objectAtIndex:indexPath.row]lightSaber]color];
         

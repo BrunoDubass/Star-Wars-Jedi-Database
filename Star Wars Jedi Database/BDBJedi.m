@@ -14,7 +14,7 @@
 #pragma mark - CLASS CONSTRUCTORS
 
 +(id)jediWithName:(NSString *)aName
-    midichlorians:(int)nMidichlorians
+    midichlorians:(NSUInteger)nMidichlorians
         jediRange:(NSString*)aRange
        lightSaber:(BDBLightSaber*)aLightSaber
         padawanOf:(BDBJedi*)aPadawanOf{
@@ -32,7 +32,7 @@
 #pragma mark - INITS
 
 -(id)initWithName:(NSString *)aName
-    midichlorians:(int)nMidichlorians
+    midichlorians:(NSUInteger) nMidichlorians
         jediRange:(NSString*)aRange
        lightSaber:(BDBLightSaber*)aLightSaber
         padawanOf:(BDBJedi*)aPadawanOf{
@@ -60,8 +60,8 @@
 }
 
 -(NSString*)description{
-    return [NSString stringWithFormat:@"Jedi Name: %@ Midichlorians: %i LightSaber: %@ PadawanOf: %@ ",
-            [self name], [self midichlorians], self.lightSaber, self.padawanOf];
+    return [NSString stringWithFormat:@"Jedi Name: %@ Midichlorians: %lu LightSaber: %@ PadawanOf: %@ ",
+            [self name], (unsigned long)[self midichlorians], self.lightSaber, self.padawanOf];
 }
 
 -(BOOL)isEqual:(BDBJedi*)aJedi{

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 brunodominguez. All rights reserved.
 //
 
-#import "BDBJediViewController.h"
+
 
 #import "BDBMasterOfPadawanTableViewController.h"
 
@@ -18,7 +18,9 @@
 
 @end
 
-@interface BDBKnightViewController : BDBJediViewController <UIPickerViewDelegate, UIPickerViewDataSource, BDBMasterOfPadawanTableViewControlerDelegate>
+@interface BDBKnightViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, BDBMasterOfPadawanTableViewControlerDelegate>
+
+#pragma mark - PROPERTIES
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *midiChloriansField;
@@ -33,6 +35,7 @@
 @property (strong, nonatomic) id<BDBKnightViewControllerDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackgroundField;
 @property (strong, nonatomic) UIImage* imageBackground;
+- (IBAction)jediTable:(id)sender;
 
 - (IBAction)midiChloriansAction:(id)sender;
 - (IBAction)sliderAction:(id)sender;

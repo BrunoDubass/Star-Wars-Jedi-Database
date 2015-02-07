@@ -13,7 +13,7 @@
 
 #pragma mark - PROPERTIES
 
-@property (nonatomic) int midichlorians;
+@property (nonatomic) NSUInteger midichlorians;
 @property (copy, nonatomic) NSString* jediRange;
 @property (strong, nonatomic) BDBLightSaber* lightSaber;
 @property (strong, nonatomic) BDBJedi* padawanOf;
@@ -21,7 +21,7 @@
 #pragma mark - CLASS CONSTRUCTORS
 
 +(id)jediWithName:(NSString *)aName
-    midichlorians:(int)nMidichlorians
+    midichlorians:(NSUInteger)nMidichlorians
         jediRange:(NSString*)aRange
        lightSaber:(BDBLightSaber*)aLightSaber
         padawanOf:(BDBJedi*)aPadawanOf;
@@ -32,7 +32,7 @@
 #pragma mark - INITS
 
 -(id)initWithName:(NSString *)aName
-    midichlorians:(int)nMidichlorians
+    midichlorians:(NSUInteger)nMidichlorians
         jediRange:(NSString*)aRange
        lightSaber:(BDBLightSaber*)aLightSaber
         padawanOf:(BDBJedi*)aPadawanOf;

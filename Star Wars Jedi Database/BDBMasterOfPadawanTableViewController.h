@@ -20,7 +20,11 @@
 
 @interface BDBMasterOfPadawanTableViewController : UITableViewController
 
+#pragma mark - PROPERTIES
+
 @property (strong, nonatomic) id<BDBMasterOfPadawanTableViewControlerDelegate> delegate;
+
+#pragma mark - INITS
 
 -(id)initWithModelKnight:(NSArray*)aKnight Master:(NSArray*)aMaster Grand:(NSArray*)aGrand;
 
